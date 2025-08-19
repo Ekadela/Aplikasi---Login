@@ -36,14 +36,20 @@ const expectedEmail = 'admin@dicoding.com';
 */
 const expectedPassword = 'superpassword';
 
+/* Comment : Menambahkan aksi klik pada button */
 loginFormElement.addEventListener('submit', function(event) {
   event.preventDefault();
 
+  /* Comment : Mendapatkan nilai dari masing-masing input ketika tombol ditekan */
   const email = inputEmailElement.value;
   const password = inputPasswordElement.value;
+
+  /* Comment : Memastikan bahwa email dan pass sesuai dengan nilai yang tersimpan */
   if (email == expectedEmail && password == expectedPassword) {
+    /* Comment : Jika sesuai maka pindah ke halaman home */
     goToHome();
   } else {
+    /* Comment : Jika tidak sesuai akanmenampilkan informasi bahwa input salah */
     showPopUp();
   }
 });
